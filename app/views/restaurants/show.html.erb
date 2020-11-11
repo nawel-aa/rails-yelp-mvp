@@ -5,11 +5,13 @@
   <p><%= @restaurant.phone_number %></p>
 
   <% if @restaurant.reviews.count > 0 %>
-    <ul>
+    <ul class="list-unstyled">
       <% @restaurant.reviews.each do |review| %>
         <li>
           <div>
-            <p><%= review.rating %></p>
+          <% review.rating.times do %>
+            <span><%= '⭐' %></span>
+          <% end %>
             <div>
               <%= review.content %>
             </div>
