@@ -22,5 +22,7 @@
   <% else %>
     <p>No reviews yet.</p>
   <% end %>
-  <%= link_to  "Add a review", new_restaurant_review_path(@restaurant) %>
+
+  <h2>Leave a review</h2>
+  <%= render "/reviews/form" %>
 </div>
